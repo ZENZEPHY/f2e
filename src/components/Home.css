@@ -1,0 +1,318 @@
+/* Clear all previous styles and start fresh */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Overall container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.row {
+  width: 100%;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+}
+
+.home-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Content container */
+.hero-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title styling */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Description styling */
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Button styling */
+.demo-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.demo-button:hover {
+  background-color: #1d4ed8;
+  border-color: white;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* Main container styling */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* Content wrapper */
+.flex > div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading styles */
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+/* Paragraph styles */
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #4b5563;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button styles */
+button.mt-6 {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button.mt-6:hover {
+  background-color: #ffffff;
+  border-color: white;
+}
+
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 100px; /* Space for navbar */
+  
+  /* Option 1: Linear gradient background */
+  background: linear-gradient(135deg, #728cdb, #041c7e, #323335);
+  
+  /* Option 2: Radial gradient for vignette effect (uncomment to use) */
+  /* background: radial-gradient(circle at center, #4a69bd 0%, #1e3799 50%, #0a2472 100%); */
+  
+  /* Option 3: More subtle gradient with lighter center */
+  /* background: radial-gradient(circle at center, #f0f9ff 0%, #b9d7ea 40%, #1e3799 100%); */
+  
+  position: relative;
+}
+
+/* Add a vignette overlay to darken the edges (optional) */
+.home-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 100px rgba(0, 0, 41, 0.8);
+  z-index: 1;
+}
+
+/* Make sure all content is above the vignette overlay */
+.navbar, .content-container, #homeCarousel {
+  position: relative;
+  z-index: 2;
+}
+
+/* Adjust text colors for better visibility on blue background */
+.main-title {
+  color: #ffffff;
+}
+
+.description {
+  color: #f0f0f0;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px); /* Full height minus navbar */
+  padding-top: 50px;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-title {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  font-size: 1.125rem;
+  margin: 1rem 0 2rem;
+  text-align: center;
+}
+
+/* Carousel styling */
+#homeCarousel {
+  margin-top: -2px; /* Adjust based on your navbar height */
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(32, 32, 32, 0.5);
+}
+
+.bg-image-1 {
+    background-image: url('/images/carousel-1.jpg');
+  }
+  
+  .bg-image-2 {
+    background-image: url('/images/carousel-2.jpg');
+  }
+  
+  .bg-image-3 {
+    background-image: url('/images/carousel-3.jpg');
+  }
+
+
+.carousel-caption {
+  bottom: 100px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.carousel-caption h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Adjust content container to work with carousel */
+.content-container {
+  padding-top: 50px;
+}
