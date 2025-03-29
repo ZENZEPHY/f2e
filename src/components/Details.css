@@ -1,0 +1,81 @@
+/* Details.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4a90e2;
+}
+
+.data-list {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.data-list th, .data-list td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.data-list th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+}
+
+.data-list tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+.loading, .error {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.loading {
+    color: #888;
+}
+
+.error {
+    color: red;
+}
+
+.button {
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background-color: #357ab8;
+}
